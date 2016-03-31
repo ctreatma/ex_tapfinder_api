@@ -14,7 +14,7 @@ defmodule ExTapfinderApi.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :httpotion]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +27,9 @@ defmodule ExTapfinderApi.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [
+      {:httpotion, "~> 2.2.0"},
+      {:hypermock, "0.0.1", only: :test}
+    ]
   end
 end
